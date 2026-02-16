@@ -33,7 +33,7 @@
 
         public static void Render(float dt)
         {
-            if (currentScene is not null) currentScene.Render(dt);
+            currentScene?.Render(dt);
         }
     }
 }

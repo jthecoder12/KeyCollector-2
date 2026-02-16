@@ -16,7 +16,7 @@ namespace KeyCollector_2.Engine
             {
                 Raylib.BeginDrawing();
                 float dt = Raylib.GetFrameTime();
-                Update(Raylib.GetFrameTime());
+                Update(dt);
                 SceneManager.Render(dt);
                 Raylib.EndDrawing();
             }
@@ -24,11 +24,8 @@ namespace KeyCollector_2.Engine
 
         internal abstract void Init();
         protected abstract void Update(float dt);
-        
-        protected void Shutdown()
-        {
 
-        }
+        protected abstract void Shutdown();
 
         public void Dispose()
         {
