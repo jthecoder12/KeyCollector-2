@@ -1,6 +1,4 @@
-﻿using KeyCollector_2.Engine;
-
-namespace KeyCollector_2.engine
+﻿namespace KeyCollector_2.Engine
 {
     public class DesktopLauncher
     {
