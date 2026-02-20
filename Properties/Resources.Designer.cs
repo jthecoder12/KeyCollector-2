@@ -61,11 +61,38 @@ namespace KeyCollector_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///
+        ///  ],
+        ///
+        ///  &quot;keys&quot;: [
+        ///    [200, 200]
+        ///  ]
+        ///}.
+        /// </summary>
+        internal static string level1 {
+            get {
+                return ResourceManager.GetString("level1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] OpenSans {
             get {
                 object obj = ResourceManager.GetObject("OpenSans", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] play {
+            get {
+                object obj = ResourceManager.GetObject("play", resourceCulture);
                 return ((byte[])(obj));
             }
         }

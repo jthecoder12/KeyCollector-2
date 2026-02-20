@@ -1,11 +1,12 @@
 ﻿namespace KeyCollector_2.Engine.SceneManagement;
 
-public abstract class Scene : IDisposable
+public abstract class Scene : IDisposable, IRenderableDT
 {
     internal bool alreadyInit;
 
     internal abstract void Init();
-    internal abstract void Render(float dt);
+    internal abstract void Resize(float width, float height);
 
     public abstract void Dispose();
+    public abstract void Render(float dt);
 }

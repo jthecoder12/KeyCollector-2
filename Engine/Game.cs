@@ -3,10 +3,11 @@ using Raylib_cs;
 
 namespace KeyCollector_2.Engine
 {
-    public abstract class Game : IDisposable
+    public abstract class Game : IDisposable, IRenderable
     {
         public Game(int width, int height, string title)
         {
+            Raylib.SetConfigFlags(ConfigFlags.ResizableWindow);
             Raylib.InitWindow(width, height, title);
         }
 

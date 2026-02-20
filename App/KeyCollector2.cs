@@ -5,16 +5,14 @@ using Raylib_cs;
 
 namespace KeyCollector_2.App
 {
-    internal class KeyCollector2 : Game
+    internal class KeyCollector2(int width, int height, string title) : Game(width, height, title)
     {
         internal static Font font50;
 
-        public KeyCollector2(int width, int height, string title) : base(width, height, title)
-        {
-        }
-
         internal override void Init()
         {
+            Raylib.SetTargetFPS(Raylib.GetMonitorRefreshRate(Raylib.GetCurrentMonitor()));
+
             font50 = Raylib.LoadFontFromMemory(".ttf", Properties.Resources.OpenSans, 50, null, 0);
             SceneManager.SetCurrentScene(SceneManager.AddScene(new TitleScene()));
         }

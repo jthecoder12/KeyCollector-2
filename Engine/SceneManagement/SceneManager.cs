@@ -1,4 +1,6 @@
-﻿namespace KeyCollector_2.Engine.SceneManagement
+﻿using Raylib_cs;
+
+namespace KeyCollector_2.Engine.SceneManagement
 {
     public static class SceneManager
     {
@@ -25,6 +27,7 @@
             if(!scene.alreadyInit)
             {
                 scene.Init();
+                scene.Resize(Raylib.GetScreenWidth(), Raylib.GetScreenHeight());
                 scene.alreadyInit = true;
             }
 
@@ -34,6 +37,7 @@
         public static void Render(float dt)
         {
             currentScene?.Render(dt);
+            if (Raylib.IsWindowResized()) currentScene?.Resize(Raylib.GetScreenWidth(), Raylib.GetScreenHeight());
         }
     }
 }
