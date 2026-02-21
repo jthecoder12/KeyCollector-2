@@ -1,14 +1,7 @@
 ﻿namespace KeyCollector_2.Engine
 {
-    public class DesktopLauncher
+    public class DesktopLauncher(Game game)
     {
-        private readonly Game game;
-
-        public DesktopLauncher(Game game)
-        {
-            this.game = game;
-        }
-
         public void Run()
         {
             game.Init();

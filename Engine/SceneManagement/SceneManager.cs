@@ -4,7 +4,7 @@ namespace KeyCollector_2.Engine.SceneManagement
 {
     public static class SceneManager
     {
-        private static List<Scene> scenes = new List<Scene>();
+        private static readonly List<Scene> scenes = [];
         private static Scene? currentScene;
 
         public static Scene AddScene(Scene scene)

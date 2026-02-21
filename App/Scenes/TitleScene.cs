@@ -5,7 +5,7 @@ using System.Numerics;
 
 namespace KeyCollector_2.App.Scenes
 {
-    public class TitleScene : Scene
+    internal class TitleScene : Scene
     {
         private const int fontSize = 50;
         private const string titleText = "Key Collector 2";
@@ -17,16 +17,19 @@ namespace KeyCollector_2.App.Scenes
 
         internal override void Init()
         {
-            Image playButtonImage = Raylib.LoadImageFromMemory(".png", Properties.Resources.play);
+            Image playButtonImage = Raylib.LoadImageFromMemory(".png", Properties.Resources.rectbutton);
             playButtonWidth = playButtonImage.Width;
-            playButton = new(playButtonImage, Vector2.Zero, 3);
+            playButton = new(playButtonImage, Vector2.Zero, 3, KeyCollector2.font50, 50, "Play", false);
         }
 
         public override void Render(float dt)
         {
             Raylib.DrawTextEx(KeyCollector2.font50, titleText, titlePosition, fontSize, 0, Color.White);
 
-            if (playButton?.IsPressed ?? false) SceneManager.SetCurrentScene(SceneManager.AddScene(new LevelScene(Properties.Resources.level1)));
+            if (playButton?.IsPressed ?? false) {
+                KeyCollector2.clickSound?.Play();
+                SceneManager.SetCurrentScene(SceneManager.AddScene(new LevelSelectorScene()));
+            }
 
             playButton?.Render();
         }
@@ -39,8 +42,8 @@ namespace KeyCollector_2.App.Scenes
 
         internal override void Resize(float width, float height)
         {
-            playButton?.SetPosition(new Vector2(width / 2 - playButtonWidth / 2, height / 3.6f));
-            titlePosition = new Vector2(width / 2 - Raylib.MeasureTextEx(KeyCollector2.font50, titleText, fontSize, 0).X / 2, height / 80);
+            playButton?.SetPosition(new(width / 2 - playButtonWidth / 2, height / 3.6f));
+            titlePosition = new(width / 2 - Raylib.MeasureTextEx(KeyCollector2.font50, titleText, fontSize, 0).X / 2, height / 80);
         }
     }
 }

@@ -9,6 +9,7 @@ namespace KeyCollector_2.Engine
         {
             Raylib.SetConfigFlags(ConfigFlags.ResizableWindow);
             Raylib.InitWindow(width, height, title);
+            Raylib.InitAudioDevice();
         }
 
         public void Render()
@@ -33,6 +34,7 @@ namespace KeyCollector_2.Engine
             Console.WriteLine("Disposing");
             Shutdown();
             SceneManager.Dispose();
+            Raylib.CloseAudioDevice();
             Raylib.CloseWindow();
         }
     }

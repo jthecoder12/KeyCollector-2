@@ -61,6 +61,26 @@ namespace KeyCollector_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] circlebutton {
+            get {
+                object obj = ResourceManager.GetObject("circlebutton", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] click {
+            get {
+                object obj = ResourceManager.GetObject("click", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {
         ///  &quot;spikes&quot;: [
         ///
@@ -80,6 +100,16 @@ namespace KeyCollector_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] music {
+            get {
+                object obj = ResourceManager.GetObject("music", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] OpenSans {
             get {
                 object obj = ResourceManager.GetObject("OpenSans", resourceCulture);
@@ -90,9 +120,9 @@ namespace KeyCollector_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] play {
+        internal static byte[] rectbutton {
             get {
-                object obj = ResourceManager.GetObject("play", resourceCulture);
+                object obj = ResourceManager.GetObject("rectbutton", resourceCulture);
                 return ((byte[])(obj));
             }
         }
