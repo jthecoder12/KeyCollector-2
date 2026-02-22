@@ -15,11 +15,13 @@ namespace KeyCollector_2.App.Scenes
         private int playButtonWidth;
         private SpriteButton? playButton;
 
+        private LevelSelectorScene? levelSelectorScene;
+
         internal override void Init()
         {
             Image playButtonImage = Raylib.LoadImageFromMemory(".png", Properties.Resources.rectbutton);
             playButtonWidth = playButtonImage.Width;
-            playButton = new(playButtonImage, Vector2.Zero, 3, KeyCollector2.font50, 50, "Play", false);
+            playButton = new(playButtonImage, Vector2.Zero, 3, KeyCollector2.font50, 50, "Play");
         }
 
         public override void Render(float dt)
@@ -28,7 +30,9 @@ namespace KeyCollector_2.App.Scenes
 
             if (playButton?.IsPressed ?? false) {
                 KeyCollector2.clickSound?.Play();
-                SceneManager.SetCurrentScene(SceneManager.AddScene(new LevelSelectorScene()));
+
+                levelSelectorScene ??= new LevelSelectorScene(this);
+                SceneManager.SetCurrentScene(SceneManager.AddScene(levelSelectorScene));
             }
 
             playButton?.Render();
@@ -40,7 +44,7 @@ namespace KeyCollector_2.App.Scenes
             Console.WriteLine("Disposing scene");
         }
 
-        internal override void Resize(float width, float height)
+        public override void Resize(int width, int height)
         {
             playButton?.SetPosition(new(width / 2 - playButtonWidth / 2, height / 3.6f));
             titlePosition = new(width / 2 - Raylib.MeasureTextEx(KeyCollector2.font50, titleText, fontSize, 0).X / 2, height / 80);

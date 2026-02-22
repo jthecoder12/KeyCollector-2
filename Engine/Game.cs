@@ -9,6 +9,7 @@ namespace KeyCollector_2.Engine
         {
             Raylib.SetConfigFlags(ConfigFlags.ResizableWindow);
             Raylib.InitWindow(width, height, title);
+            Raylib.SetExitKey(KeyboardKey.Null);
             Raylib.InitAudioDevice();
         }
 

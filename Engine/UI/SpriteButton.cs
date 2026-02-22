@@ -18,7 +18,7 @@ namespace KeyCollector_2.Engine.UI
         public bool IsPressed { get; private set; }
         public string Text { get; private set; }
 
-        public SpriteButton(Image image, Vector2 position, float numFrames, Font font, int fontSize, string text, bool dontUnloadImage)
+        public SpriteButton(Image image, Vector2 position, float numFrames, Font font, int fontSize, string text)
         {
             this.font = font;
             this.fontSize = fontSize;
@@ -27,7 +27,22 @@ namespace KeyCollector_2.Engine.UI
             textSize = Raylib.MeasureTextEx(font, Text, fontSize, 0);
 
             texture = Raylib.LoadTextureFromImage(image);
-            if(!dontUnloadImage) Raylib.UnloadImage(image);
+            Raylib.UnloadImage(image);
+
+            buttonSize = new(texture.Width, texture.Height / numFrames);
+            srcRect = new(Vector2.Zero, buttonSize);
+            btnBounds = new(position, buttonSize);
+        }
+
+        public SpriteButton(Image image, Vector2 position, float numFrames, Font font, int fontSize, string text, Texture2D texture)
+        {
+            this.font = font;
+            this.fontSize = fontSize;
+            Text = text;
+
+            textSize = Raylib.MeasureTextEx(font, Text, fontSize, 0);
+
+            this.texture = texture;
 
             buttonSize = new(texture.Width, texture.Height / numFrames);
             srcRect = new(Vector2.Zero, buttonSize);

@@ -81,19 +81,322 @@ namespace KeyCollector_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] coin {
+            get {
+                object obj = ResourceManager.GetObject("coin", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key Collector 2
+        ///A submission to the Brackeys Game Jam 2026.1 (https://itch.io/jam/brackeys-15)
+        ///
+        ///Game made by jthecoder12 (https://github.com/jthecoder12) / (https://jthecoder12.github.io) / (https://jthecoder12.itch.io)
+        ///Licensed under the GNU General Public License Version 3.0 (GPL 3.0)
+        ///
+        ///Assets:
+        ///Coin sound &quot;coin.wav&quot; / &quot;Picked Coin Echo.wav&quot; (https://opengameart.org/content/picked-coin-echo):
+        ///Author: NenadSimic (https://opengameart.org/users/nenadsimic)
+        ///Licensed under CC-BY 3.0 (https://creativecom [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string credits {
+            get {
+                return ResourceManager.GetString("credits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {
         ///  &quot;spikes&quot;: [
-        ///
+        ///    [ 200, 200 ],
+        ///    [ 400, 400 ],
+        ///    [ 600, 600 ],
+        ///    [ 800, 800 ]
         ///  ],
-        ///
+        ///  
         ///  &quot;keys&quot;: [
-        ///    [200, 200]
+        ///    [ 300, 300 ],
+        ///    [ 500, 500 ],
+        ///    [ 700, 700 ]
         ///  ]
         ///}.
         /// </summary>
         internal static string level1 {
             get {
                 return ResourceManager.GetString("level1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 200, 50 ],
+        ///    [ 200, 250 ],
+        ///    [ 200, 450 ],
+        ///    [ 200, 650 ]
+        ///  ],
+        ///
+        ///  &quot;keys&quot;: [
+        ///    [ 200, 100 ],
+        ///    [ 200, 300 ],
+        ///    [ 200, 500 ],
+        ///    [ 200, 700 ]
+        ///  ]
+        ///}.
+        /// </summary>
+        internal static string level10 {
+            get {
+                return ResourceManager.GetString("level10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 200, 250 ],
+        ///    [ 300, 250 ],
+        ///    [ 400, 250 ],
+        ///    [ 500, 250 ],
+        ///    [ 600, 250 ],
+        ///    [ 700, 250 ],
+        ///    [ 800, 250 ],
+        ///    [ 900, 250 ],
+        ///    [ 1000, 250 ],
+        ///    [ 200, 350 ],
+        ///    [ 300, 350 ],
+        ///    [ 400, 350 ],
+        ///    [ 500, 350 ],
+        ///    [ 600, 350 ],
+        ///    [ 700, 350 ],
+        ///    [ 800, 350 ],
+        ///    [ 900, 350 ],
+        ///    [ 1000, 350 ]
+        ///  ],
+        ///
+        ///  &quot;keys&quot;: [
+        ///    [ 200, 300 ],
+        ///    [ 300, 300 ],
+        ///    [ 400, 300 ],
+        ///    [ 500, 300 ],
+        ///    [ 600, 300 ],
+        ///    [ 700, 300 ],
+        ///    [ 800, 300 ] [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string level2 {
+            get {
+                return ResourceManager.GetString("level2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 200, 30 ],
+        ///    [ 200, 100 ],
+        ///    [ 200, 200 ],
+        ///    [ 200, 300 ],
+        ///    [ 200, 400 ],
+        ///    [ 200, 500 ],
+        ///    [ 200, 600 ],
+        ///    [ 200, 700 ],
+        ///    [ 350, 30 ],
+        ///    [ 350, 100 ],
+        ///    [ 350, 200 ],
+        ///    [ 350, 300 ],
+        ///    [ 350, 400 ],
+        ///    [ 350, 500 ],
+        ///    [ 350, 600 ],
+        ///    [ 350, 700 ]
+        ///  ],
+        ///
+        ///  &quot;keys&quot;: [
+        ///    [ 250, 30 ],
+        ///    [ 250, 100 ],
+        ///    [ 250, 200 ],
+        ///    [ 250, 300 ],
+        ///    [ 250, 400 ],
+        ///    [ 250, 500 ],
+        ///    [ 250, 600 ],
+        ///    [ 250, 700 ]
+        ///  ]
+        ///}.
+        /// </summary>
+        internal static string level3 {
+            get {
+                return ResourceManager.GetString("level3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 200, 200 ],
+        ///    [ 300, 300 ],
+        ///    [ 400, 400 ],
+        ///    [ 500, 500 ],
+        ///    [ 600, 600 ]
+        ///  ],
+        ///
+        ///  &quot;keys&quot;: [
+        ///    [ 1050, 200 ],
+        ///    [ 950, 300 ],
+        ///    [ 850, 400 ],
+        ///    [ 750, 500 ],
+        ///    [ 650, 600 ],
+        ///    [ 45, 45 ]
+        ///  ]
+        ///}.
+        /// </summary>
+        internal static string level4 {
+            get {
+                return ResourceManager.GetString("level4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 200, 200 ],
+        ///    [ 300, 200 ],
+        ///    [ 400, 200 ],
+        ///    [ 500, 200 ],
+        ///    [ 600, 200 ],
+        ///    [ 700, 200 ],
+        ///    [ 800, 200 ],
+        ///    [ 900, 200 ],
+        ///    [ 1000, 200 ],
+        ///    [ 1100, 200 ],
+        ///    [ 1200, 200 ],
+        ///    [ 200, 400 ],
+        ///    [ 300, 400 ],
+        ///    [ 400, 400 ],
+        ///    [ 500, 400 ],
+        ///    [ 600, 400 ],
+        ///    [ 700, 400 ],
+        ///    [ 800, 400 ],
+        ///    [ 900, 400 ],
+        ///    [ 1000, 400 ],
+        ///    [ 1100, 400 ],
+        ///    [ 1200, 400 ],
+        ///    [ 200, 600 ],
+        ///    [ 300, 600 ],
+        ///    [ 400, 600 ],
+        ///    [ 500, 60 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string level5 {
+            get {
+                return ResourceManager.GetString("level5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 200, 200 ],
+        ///    [ 200, 300 ],
+        ///    [ 200, 400 ],
+        ///    [ 200, 500 ],
+        ///    [ 200, 600 ],
+        ///    [ 200, 700 ],
+        ///    [ 400, 200 ],
+        ///    [ 400, 300 ],
+        ///    [ 400, 400 ],
+        ///    [ 400, 500 ],
+        ///    [ 400, 600 ],
+        ///    [ 400, 700 ],
+        ///    [ 600, 200 ],
+        ///    [ 600, 300 ],
+        ///    [ 600, 400 ],
+        ///    [ 600, 500 ],
+        ///    [ 600, 600 ],
+        ///    [ 600, 700 ],
+        ///    [ 800, 200 ],
+        ///    [ 800, 300 ],
+        ///    [ 800, 400 ],
+        ///    [ 800, 500 ],
+        ///    [ 800, 600 ],
+        ///    [ 800, 700 ],
+        ///    [ 1000, 200 ],
+        ///    [ 1000, 300 ], [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string level6 {
+            get {
+                return ResourceManager.GetString("level6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 640, 30 ],
+        ///    [ 640, 690 ],
+        ///    [ 30, 360 ],
+        ///    [ 1250, 360 ]
+        ///  ],
+        ///
+        ///  &quot;keys&quot;: [
+        ///    [ 640, 60 ],
+        ///    [ 670, 720 ],
+        ///    [ 45, 390 ],
+        ///    [ 1280, 390 ]
+        ///  ]
+        ///}.
+        /// </summary>
+        internal static string level7 {
+            get {
+                return ResourceManager.GetString("level7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 640, 60 ],
+        ///    [ 670, 720 ],
+        ///    [ 45, 390 ],
+        ///    [ 1280, 390 ]
+        ///  ],
+        ///
+        ///  &quot;keys&quot;: [
+        ///    [ 640, 30 ],
+        ///    [ 640, 690 ],
+        ///    [ 30, 360 ],
+        ///    [ 1250, 360 ]
+        ///  ]
+        ///}.
+        /// </summary>
+        internal static string level8 {
+            get {
+                return ResourceManager.GetString("level8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;spikes&quot;: [
+        ///    [ 250, 200 ],
+        ///    [ 450, 200 ],
+        ///    [ 650, 200 ],
+        ///    [ 850, 200 ],
+        ///    [ 1050, 200 ],
+        ///    [ 1150, 200 ]
+        ///  ],
+        ///
+        ///  &quot;keys&quot;: [
+        ///    [ 300, 200 ],
+        ///    [ 500, 200 ],
+        ///    [ 700, 200 ],
+        ///    [ 900, 200 ],
+        ///    [ 1100, 200 ]
+        ///  ]
+        ///}.
+        /// </summary>
+        internal static string level9 {
+            get {
+                return ResourceManager.GetString("level9", resourceCulture);
             }
         }
         

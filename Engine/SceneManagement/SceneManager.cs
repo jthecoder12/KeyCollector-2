@@ -14,6 +14,13 @@ namespace KeyCollector_2.Engine.SceneManagement
             return scene;
         }
 
+        public static void RemoveSceneType(Type type)
+        {
+            List<Scene> scenesToRemove = [];
+            foreach (Scene scene in scenes) if (type.IsAssignableFrom(scene.GetType())) scenesToRemove.Add(scene);
+            foreach (Scene scene in scenesToRemove) scenes.Remove(scene);
+        }
+
         public static void Dispose()
         {
             currentScene = null;
@@ -38,6 +45,11 @@ namespace KeyCollector_2.Engine.SceneManagement
         {
             currentScene?.Render(dt);
             if (Raylib.IsWindowResized()) currentScene?.Resize(Raylib.GetScreenWidth(), Raylib.GetScreenHeight());
+        }
+
+        public static List<Scene> GetScenes()
+        {
+            return scenes;
         }
     }
 }
