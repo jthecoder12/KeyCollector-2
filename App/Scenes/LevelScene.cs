@@ -1,4 +1,4 @@
-﻿using ImGuiNET;
+using ImGuiNET;
 using KeyCollector_2.App.Entities;
 using KeyCollector_2.Engine.SceneManagement;
 using Raylib_cs;
@@ -79,8 +79,6 @@ namespace KeyCollector_2.App.Scenes
 
             levelData.TryGetValue("spikes", out int[][]? spikes);
             if (spikes is not null) foreach (int[] spikePos in spikes) spikeList.Add(new(spikePos, this));
-
-            
         }
 
         public override void Resize(int width, int height)
